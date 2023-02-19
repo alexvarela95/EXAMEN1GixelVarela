@@ -1,0 +1,16 @@
+version: '3.5'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-CU18-ubuntu-20.04
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=PR0GRA_CION1*
+      - MSSQL_PID=Developer
+    volumes:
+      - ./GuardarDatos:/var/opt/mssql/data
+
+#docker compose build
+#docker compose up
+#docker compose down
